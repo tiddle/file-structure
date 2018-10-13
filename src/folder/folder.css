@@ -1,0 +1,7 @@
+.folder__container--open {
+	display: block;
+}
+
+.folder__container--closed {
+	display: none;
+}

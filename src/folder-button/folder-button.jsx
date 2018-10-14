@@ -68,7 +68,15 @@ class FolderButton extends Component {
 
 FolderButton.propTypes = {
 	name: PropTypes.string,
-	closed: PropTypes.bool
+	closed: PropTypes.bool,
+	children: PropTypes.arrayOf(
+		PropTypes.shape({
+            type: PropTypes.string.isRequired,
+			name: PropTypes.string.isRequired,
+			size: PropTypes.number,
+			children: PropTypes.array
+		}).isRequired
+	)
 };
 
 FolderButton.defaultPropTypes = {

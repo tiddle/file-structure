@@ -37,6 +37,7 @@ class Folder extends Component {
 Folder.propTypes = {
 	folderStructure: PropTypes.arrayOf(
 		PropTypes.shape({
+            type: PropTypes.string.isRequired,
 			name: PropTypes.string.isRequired,
 			size: PropTypes.number,
 			children: PropTypes.array

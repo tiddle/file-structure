@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Description from '@material-ui/icons/Description';
 import PropTypes from 'prop-types';
+import Filesize from 'filesize';
+
 import './file.css';
 
 class File extends Component {
@@ -9,7 +11,7 @@ class File extends Component {
 			<a href={this.props.name} className="file">
 				<span className="file__icon"><Description /></span>
 				<span className="file__name">{this.props.name}</span>
-				<span className="file__size">{this.props.size}</span>
+				<span className="file__size">{Filesize(this.props.size)}</span>
 			</a>
 		);
 	}

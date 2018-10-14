@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Folder from './folder/folder';
+import Size from './total/size';
+import FileCount from './total/file-count';
 import './App.css';
 
 const folderStructure = [
@@ -89,6 +91,8 @@ class App extends Component {
 		return (
 			<div className="App">
 				<Folder folderStructure={folderStructure} closed={false} />
+				<Size folderStructure={folderStructure} />
+				<FileCount folderStructure={folderStructure} />
 			</div>
 		);
 	}

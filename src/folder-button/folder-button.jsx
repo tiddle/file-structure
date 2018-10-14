@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import {
 	FolderOpen,
 	Folder as FolderClosed,
-	ExpandLess,
-	ExpandMore
+	ExpandMore,
+	ChevronRight
 } from '@material-ui/icons';
 
 import './folder-button.css';
@@ -38,12 +38,12 @@ class FolderButton extends Component {
 					<span className="folder-button__icon">
 						{this.state.closed ? (
 							<>
-								<ExpandMore />
+								<ChevronRight />
 								<FolderClosed />
 							</>
 						) : (
 							<>
-								<ExpandLess />
+								<ExpandMore />
 								<FolderOpen />
 							</>
 						)}

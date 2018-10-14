@@ -14,3 +14,10 @@
 .file__name {
 	margin-left: 30px;
 }
+
+.file__size {
+    display: inline-block;
+    margin-left: 10px;
+    text-decoration: none;
+    color: #222;
+}

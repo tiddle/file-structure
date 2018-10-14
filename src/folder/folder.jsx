@@ -6,11 +6,6 @@ import FolderButton from '../folder-button/folder-button';
 import './folder.css';
 
 class Folder extends Component {
-	constructor(props) {
-		super(props);
-
-	}
-
 	render() {
 		return (
 			<ul className={`folder ${this.props.className}`}>
@@ -25,8 +20,10 @@ class Folder extends Component {
 						} else {
 							acc.push(
 								<li className="folder__item" key={curr.name}>
-									<FolderButton name={curr.name} children={curr.children}>
-									</FolderButton>
+									<FolderButton
+										name={curr.name}
+										children={curr.children}
+									/>
 								</li>
 							);
 						}
@@ -42,7 +39,7 @@ Folder.propTypes = {
 		PropTypes.shape({
 			name: PropTypes.string.isRequired,
 			size: PropTypes.number,
-			content: PropTypes.array
+			children: PropTypes.array
 		}).isRequired
 	),
 	closed: PropTypes.bool,

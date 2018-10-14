@@ -4,31 +4,83 @@ import './App.css';
 
 const folderStructure = [
 	{
+		type: 'file',
+		name: 'assurance_interface_multi_tasking.gif',
+		size: 9080
+	},
+	{
 		type: 'folder',
-		name: 'Folder 1',
-		content: [
+		name: 'cross-platform',
+		children: [
 			{
 				type: 'folder',
-				name: 'Folder 2',
-				content: [
+				name: 'bluetooth',
+				children: [
 					{
-						type: 'file',
-						name: 'Chapstick.doc',
-						size: 1024
+						type: 'folder',
+						name: 'optical',
+						children: [
+							{
+								type: 'folder',
+								name: 'redundant',
+								children: []
+							},
+							{
+								type: 'file',
+								name: 'checking_account.png',
+								size: 78944
+							}
+						]
+					},
+					{
+						type: 'folder',
+						name: 'cross-platform',
+						children: []
+					},
+					{
+						type: 'folder',
+						name: 'redundant',
+						children: [
+							{
+								type: 'file',
+								name: 'panel_e_commerce.mpeg',
+								size: 1494
+							},
+							{
+								type: 'folder',
+								name: '1080p',
+								children: []
+							},
+							{
+								type: 'file',
+								name: 'checking_account_representative.shtml',
+								size: 4307
+							},
+							{
+								type: 'file',
+								name: 'ports_won_portals.mp4',
+								size: 92027
+							}
+						]
 					},
 					{
 						type: 'file',
-						name: 'Hello.jpg',
-						size: 2024
+						name: 'international.html',
+						size: 6874
 					}
 				]
+			},
+			{
+				type: 'file',
+				name: 'optical.png',
+				size: 23683
 			}
 		]
 	},
 	{
 		type: 'file',
-		name: 'Not a folder',
-		size: 3000
+		name: 'embrace_deposit.png',
+		size: 18499
 	}
 ];
 

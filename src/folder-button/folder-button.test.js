@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import File from './file';
+import FolderButton from './folder-button';
 
 it('renders without crashing', () => {
-	shallow(<File name="Hello" size={1} />);
+	shallow(<FolderButton />);
 });

@@ -1,21 +1,34 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { shallow } from 'enzyme';
 import Folder from './folder';
 
-const file = {
-	name: 'a file.doc',
-	size: 1024,
-
-}
-
 it('renders without crashing', () => {
-	const div = document.createElement('div');
-	ReactDOM.render(<Folder />, div);
-	ReactDOM.unmountComponentAtNode(div);
+	shallow(<Folder />);
 });
 
-it('renders a file', () => {
-	const div = document.createElement('div');
-	ReactDOM.render(<Folder folderStructure={[file]} />, div);
-	ReactDOM.unmountComponentAtNode(div);
+it('should render a file', () => {
+	const test = [
+		{
+			type: 'file',
+			name: 'folder.css',
+			size: 1
+		}
+	];
+
+	expect(shallow(<Folder folderStructure={test} />).find('File').length).toBe(
+		1
+	);
+});
+
+it('should render a folder', () => {
+	const test = [
+		{
+			type: 'folder',
+			name: 'folder.css'
+		}
+	];
+
+	expect(
+		shallow(<Folder folderStructure={test} />).find('FolderButton').length
+	).toBe(1);
 });
